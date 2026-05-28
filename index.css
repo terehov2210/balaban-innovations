@@ -167,7 +167,7 @@
     --cursor-bg: rgba(26, 24, 29, 0.4);
     --cursor-border: rgba(255, 255, 255, 0.2);
     --placeholder-color: rgba(255, 255, 255, 0.65);
-    --plan-stroke: rgba(255, 255, 255, 0.08);
+    --plan-stroke: rgba(255, 255, 255, 0.4);
 }
 
 /* Day Theme overrides */
@@ -185,7 +185,7 @@ body.light-theme {
     --cursor-bg: rgba(229, 229, 234, 0.4);
     --cursor-border: rgba(0, 0, 0, 0.2);
     --placeholder-color: rgba(0, 0, 0, 0.65);
-    --plan-stroke: rgba(0, 0, 0, 0.06);
+    --plan-stroke: rgba(0, 0, 0, 0.3);
 }
 
 /* Reset and Base Styles */
@@ -1091,8 +1091,10 @@ body {
    Section 2: Mission
    ========================================================================== */
 .section-mission {
+    position: relative;
     padding: 100px 50px;
     width: 100%;
+    overflow: hidden;
 }
 
 .mission-wrapper {
@@ -1102,6 +1104,7 @@ body {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    z-index: 2;
 }
 
 .section-heading {
@@ -3460,7 +3463,7 @@ body.light-theme .page-num.active {
     position: absolute;
     width: clamp(400px, 45vw, 700px);
     height: clamp(400px, 45vw, 700px);
-    opacity: 0.75;
+    opacity: 0.15; /* side fixed decorators are very subtle */
 }
 
 .bg-plan-wrapper.left {
@@ -3473,6 +3476,18 @@ body.light-theme .page-num.active {
     right: -15%;
     bottom: 10%;
     transform: rotate(25deg);
+}
+
+.section-bg-plan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    width: min(750px, 90vw);
+    height: min(750px, 90vw);
+    opacity: 0.28; /* centered section blueprint is more visible */
+    pointer-events: none;
+    z-index: 0;
 }
 
 .bg-plan-wrapper svg {
