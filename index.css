@@ -154,6 +154,7 @@
     --accent-yellow: #ffb800;
     --transition-smooth: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     --transition-fast: all 0.3s ease;
+    --accordion-height: clamp(420px, 48vh, 500px);
     
     /* Fonts mapping */
     --font-primary: 'Gilroy', 'Manrope', sans-serif;
@@ -705,7 +706,7 @@ body {
    ========================================================================== */
 .section-hero {
     position: relative;
-    height: 1180px;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -778,7 +779,7 @@ body {
 
 .grid-line-horizontal.accordion-top {
     position: absolute;
-    top: 530px;
+    top: calc(100% - var(--accordion-height));
     left: 50px;
     right: 50px;
     height: 1px;
@@ -794,8 +795,11 @@ body {
 
 .hero-title-container {
     position: absolute;
-    top: 160px;
-    left: 50px;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
     z-index: 4;
     pointer-events: none;
 }
@@ -814,7 +818,7 @@ body {
 .hero-add-left,
 .hero-add-right {
     position: absolute;
-    top: 530px;
+    top: calc(100% - var(--accordion-height));
     z-index: 15;
 }
 
@@ -835,10 +839,10 @@ body {
     max-width: 100%;
     width: calc(100% - 100px);
     margin: 0 auto;
-    height: 650px;
+    height: var(--accordion-height);
     display: flex;
-    gap: 1px; /* border separations */
-    background-color: rgba(255, 255, 255, 0.1);
+    gap: 20px; /* spacing between cards */
+    background-color: transparent;
 }
 
 .accordion-col {
@@ -853,6 +857,7 @@ body {
     overflow: hidden;
     cursor: pointer;
     transition: var(--transition-smooth);
+    border-radius: 12px;
 }
 
 /* Accordion hover backgrounds */
@@ -1010,7 +1015,7 @@ body {
 /* Expanded text details */
 .col-expanded-details {
     position: absolute;
-    bottom: 80px;
+    bottom: 70px;
     left: 30px;
     right: 30px;
     z-index: 5;
@@ -1059,7 +1064,7 @@ body {
 .hero-center-desc {
     position: absolute;
     left: 50%;
-    top: 318px;
+    top: 31vh;
     transform: translate(-50%, -50%);
     width: 474px;
     text-align: center;
@@ -2306,6 +2311,13 @@ body {
 
 /* Tablet Portrait / Mobile Large (768px and down) */
 @media (max-width: 768px) {
+    .section-hero {
+        height: auto;
+        min-height: 100dvh;
+        padding-bottom: 40px;
+        overflow: visible;
+    }
+
     .main-header {
         padding: 20px 20px 0 20px;
     }
@@ -2313,6 +2325,9 @@ body {
     .hero-title-container {
         top: 130px;
         left: 20px;
+        transform: none;
+        text-align: left;
+        width: auto;
     }
     
     .hero-center-desc {
