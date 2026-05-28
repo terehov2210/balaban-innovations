@@ -93,48 +93,70 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Hero Section Accordion
+    const accordionContainer = document.querySelector('.hero-accordion-container');
     const accordionCols = document.querySelectorAll('.accordion-col');
 
-    function activateAccordionCol(targetCol) {
-        accordionCols.forEach(c => {
-            c.classList.remove('active');
-            c.setAttribute('aria-expanded', 'false');
-        });
-        targetCol.classList.add('active');
-        targetCol.setAttribute('aria-expanded', 'true');
-    }
+    if (accordionContainer && !accordionContainer.classList.contains('no-hover')) {
+        function activateAccordionCol(targetCol) {
+            accordionCols.forEach(c => {
+                c.classList.remove('active');
+                c.setAttribute('aria-expanded', 'false');
+            });
+            targetCol.classList.add('active');
+            targetCol.setAttribute('aria-expanded', 'true');
+        }
 
-    accordionCols.forEach(col => {
-        // Hover handling for desktop
-        col.addEventListener('mouseenter', (e) => {
-            if (window.innerWidth > 768) {
-                activateAccordionCol(e.currentTarget);
-            }
-        });
+        accordionCols.forEach(col => {
+            // Hover handling for desktop
+            col.addEventListener('mouseenter', (e) => {
+                if (window.innerWidth > 768) {
+                    activateAccordionCol(e.currentTarget);
+                }
+            });
 
-        // Click handling for tablet & mobile
-        col.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                const isActive = e.currentTarget.classList.contains('active');
-                if (isActive) {
-                    e.currentTarget.classList.remove('active');
-                    e.currentTarget.setAttribute('aria-expanded', 'false');
+            // Click handling for tablet & mobile
+            col.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    const isActive = e.currentTarget.classList.contains('active');
+                    if (isActive) {
+                        e.currentTarget.classList.remove('active');
+                        e.currentTarget.setAttribute('aria-expanded', 'false');
+                    } else {
+                        activateAccordionCol(e.currentTarget);
+                    }
                 } else {
                     activateAccordionCol(e.currentTarget);
                 }
-            } else {
-                activateAccordionCol(e.currentTarget);
-            }
-        });
+            });
 
-        // Keyboard handling (Enter/Space)
-        col.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                activateAccordionCol(e.currentTarget);
-            }
+            // Keyboard handling (Enter/Space)
+            col.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    activateAccordionCol(e.currentTarget);
+                }
+            });
         });
-    });
+    } else if (accordionContainer && accordionContainer.classList.contains('no-hover')) {
+        // Smooth scrolling to contact section for static cards
+        accordionCols.forEach(col => {
+            col.addEventListener('click', () => {
+                const targetSection = document.querySelector('#contact');
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            col.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const targetSection = document.querySelector('#contact');
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    }
 
     // 5. Synapse Hotspots (Mobile/Tablet Touch Toggle Support)
     const hotspots = document.querySelectorAll('.synapse-hotspot');

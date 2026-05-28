@@ -860,6 +860,10 @@ body {
     border-radius: 12px;
 }
 
+.no-hover .accordion-col:hover {
+    background-color: var(--bg-card-hover);
+}
+
 /* Accordion hover backgrounds */
 .accordion-col::before {
     content: '';
