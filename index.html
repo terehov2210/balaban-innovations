@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaban Innovations | Premium SPA Design & Architecture</title>
+    
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Balaban Innovations - студія, що не просто проектує лазні, а створює унікальні концепти поєднання відчуттів і бізнес-рішень. Інновації та архітектура в Україні.">
+    <meta name="keywords" content="Balaban, Innovations, Spa, Architecture, Лазні, Проектування, Будівництво, Дикі лазні, Снігові кімнати, Україна">
+    <meta name="author" content="Lena Moldovanova">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="dark-theme">
+    
+    <!-- Custom Follower Cursor for Blog Section -->
+    <div id="blog-custom-cursor" class="custom-read-cursor">
+        <span>READ</span>
+    </div>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div id="menu-overlay" class="menu-overlay">
+        <div class="menu-overlay-bg">
+            <img src="assets/b7ed6073dbf8d43540d24dee2834eb2a854281fa.svg" alt="Background" class="menu-bg-img">
+        </div>
+        
+        <!-- Menu Header -->
+        <div class="menu-header">
+            <div class="lang-selector">
+                <button class="lang-btn active" id="lang-ua">UA</button>
+                <button class="lang-btn" id="lang-en">EN</button>
+            </div>
+            <button class="menu-close-btn" id="menu-close-btn" aria-label="Close menu">
+                <img src="assets/398cfaea7eee8ed62144285ddd6e5605c5b04856.svg" alt="Close">
+            </button>
+        </div>
+
+        <!-- Right panel: Scrolling Image Columns -->
+        <div class="menu-images-panel">
+            <div class="menu-images-column col-left">
+                <div class="menu-image-card">
+                    <img src="assets/77f8e776a694dca5a559ceb76de25b1e5a9089a1.png" alt="Menu Image 1">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/55d1c2cc204359dd9e45816ab3c95001c6ae1427.png" alt="Menu Image 2">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/9094ab5f846298b0c5bd03897859955047ce2816.png" alt="Menu Image 3">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/77f8e776a694dca5a559ceb76de25b1e5a9089a1.png" alt="Menu Image 1">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/55d1c2cc204359dd9e45816ab3c95001c6ae1427.png" alt="Menu Image 2">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/9094ab5f846298b0c5bd03897859955047ce2816.png" alt="Menu Image 3">
+                </div>
+                <!-- Double duplicate to support full-screen height loop -->
+                <div class="menu-image-card">
+                    <img src="assets/77f8e776a694dca5a559ceb76de25b1e5a9089a1.png" alt="Menu Image 1">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/55d1c2cc204359dd9e45816ab3c95001c6ae1427.png" alt="Menu Image 2">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/9094ab5f846298b0c5bd03897859955047ce2816.png" alt="Menu Image 3">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/77f8e776a694dca5a559ceb76de25b1e5a9089a1.png" alt="Menu Image 1">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/55d1c2cc204359dd9e45816ab3c95001c6ae1427.png" alt="Menu Image 2">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/9094ab5f846298b0c5bd03897859955047ce2816.png" alt="Menu Image 3">
+                </div>
+            </div>
+            <div class="menu-images-column col-right">
+                <div class="menu-image-card">
+                    <img src="assets/71375e590e744840451a62a6d9a34f304d847728.png" alt="Menu Image 4">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/abb77b08b35be00ae62efe5329778d932fa464a5.png" alt="Menu Image 5">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/2c53e1f0eac8359384a4a141d0f98fcec2762da8.png" alt="Menu Image 6">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/71375e590e744840451a62a6d9a34f304d847728.png" alt="Menu Image 4">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/abb77b08b35be00ae62efe5329778d932fa464a5.png" alt="Menu Image 5">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/2c53e1f0eac8359384a4a141d0f98fcec2762da8.png" alt="Menu Image 6">
+                </div>
+                <!-- Double duplicate to support full-screen height loop -->
+                <div class="menu-image-card">
+                    <img src="assets/71375e590e744840451a62a6d9a34f304d847728.png" alt="Menu Image 4">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/abb77b08b35be00ae62efe5329778d932fa464a5.png" alt="Menu Image 5">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/2c53e1f0eac8359384a4a141d0f98fcec2762da8.png" alt="Menu Image 6">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/71375e590e744840451a62a6d9a34f304d847728.png" alt="Menu Image 4">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/abb77b08b35be00ae62efe5329778d932fa464a5.png" alt="Menu Image 5">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/2c53e1f0eac8359384a4a141d0f98fcec2762da8.png" alt="Menu Image 6">
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Content Columns (Grid layout) -->
+        <div class="menu-content">
+            <!-- Left panel: Text Navigation Grid -->
+            <div class="menu-text-panel">
+                <!-- Top row of left panel -->
+                <div class="menu-nav-links">
+                    <div class="nav-item">
+                        <a href="index.html#about" class="main-link">ПРО нас</a>
+                    </div>
+                    <div class="nav-item has-arrow">
+                        <a href="index.html#services" class="main-link">КОНЦЕПЦІЯ</a>
+                        <img src="assets/88a6d8dc511fc79394a28614ff3c10b4de8e8c76.svg" alt="Arrow" class="nav-arrow">
+                    </div>
+                    <div class="nav-item">
+                        <a href="index.html#inventions" class="main-link">ВИНАХОДИ</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="blog.html" class="main-link">БЛОГ</a>
+                    </div>
+                </div>
+
+                <div class="menu-services-list">
+                    <a href="index.html#hero">ПРОЕКТУВАННЯ</a>
+                    <a href="index.html#hero">КОНСАЛТІНГ</a>
+                    <a href="index.html#hero">БУДІВНИЦТВО</a>
+                </div>
+
+                <!-- Bottom row of left panel -->
+                <div class="menu-sub-links">
+                    <a href="projects.html?filter=wild">Дикі лазні</a>
+                    <a href="projects.html?filter=urban">Міські лазні</a>
+                    <a href="projects.html?filter=spa">SPA-комплекси</a>
+                    <a href="projects.html?filter=ice">Льодяні кімнати</a>
+                    <a href="projects.html?filter=all">ВСІ</a>
+                </div>
+
+                <div class="menu-actions-column">
+                    <div class="menu-socials">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <img src="assets/5a72bde99e2ba28123fd57d9227339618eaa6743.svg" alt="Instagram circle" class="soc-circle">
+                            <img src="assets/1922f6308871868701172b20c31d0281fa9011e2.svg" alt="Instagram" class="soc-inner">
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Telegram">
+                            <img src="assets/8b938696fba03acb11511bf61ef60d412414abe4.svg" alt="Telegram" class="tele-img">
+                        </a>
+                    </div>
+                    
+                    <div class="menu-actions-list">
+                        <div class="media-btn video-trigger">
+                            <img src="assets/7ec2c73a644844e945f4e90162124eac5f176ad1.svg" alt="Play" class="action-icon">
+                            <span>VIDEO ABOUT US</span>
+                        </div>
+                        <div class="media-btn download-trigger">
+                            <img src="assets/6b8459ab409b63af54765745b5524b6369e088fa.svg" alt="Download" class="action-icon">
+                            <div class="action-text">
+                                <span>DOWNLOAD</span>
+                                <span>PRESENTATION</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-copyright">
+            <span>Всі права захищені © 2024 balaban.com</span>
+            <span>Політика конфіденційності</span>
+            <span>Сайт розроблений web studio</span>
+        </div>
+    </div>
+
+    <!-- Main Page Header -->
+    <header class="main-header" id="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#hero" aria-label="Balaban Innovations Logo">
+                    <img src="assets/logo_white.svg" alt="Balaban logo">
+                </a>
+            </div>
+            
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Night Mode">
+                <img src="assets/95f050aa4bd27f620da8c90e169b18f056b86ac4.svg" alt="Night theme icon">
+            </button>
+            
+            <button class="menu-trigger-btn" id="menu-trigger-btn" aria-label="Open menu">
+                <span class="menu-text">MENU</span>
+                <img src="assets/cae1d36d2cbd5950b94bba01264b081278f1739e.svg" alt="Burger Menu Icon">
+            </button>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- SECTION 1: HERO & ACCORDION SERVICES -->
+        <section id="hero" class="section-hero">
+            <div class="hero-bg-container">
+                <img src="assets/f11fd6ffcc2ce640e5af85840466bdb134b95fba.png" alt="Balaban studio luxury bath background" class="hero-bg-img">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <!-- Grid Lines Overlay -->
+            <div class="hero-grid-overlay">
+                <div class="grid-bracket"></div>
+                <div class="grid-line-vertical col-left"></div>
+                <div class="grid-line-vertical col-center"></div>
+                <div class="grid-line-vertical col-right"></div>
+                <div class="grid-line-horizontal accordion-top"></div>
+                <svg class="grid-diagonals" width="100%" height="100%">
+                    <line x1="50px" y1="100px" x2="50%" y2="100%" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+                    <line x1="calc(100% - 50px)" y1="100px" x2="50%" y2="100%" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+                    <line x1="50%" y1="100px" x2="50px" y2="100%" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+                    <line x1="50%" y1="100px" x2="calc(100% - 50px)" y2="100%" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+                </svg>
+            </div>
+
+            <!-- Title Overlay -->
+            <div class="hero-title-container">
+                <h1 class="hero-title">WE ARE INNOVATIONS</h1>
+            </div>
+
+            <!-- Horizontal line split decorators -->
+            <div class="hero-add-left"><img src="assets/1c51f677f1507b194a8924a176f668caaa789d28.svg" alt="Plus decor"></div>
+            <div class="hero-add-right"><img src="assets/1c51f677f1507b194a8924a176f668caaa789d28.svg" alt="Plus decor"></div>
+
+            <!-- Interactive 6-Column Accordion -->
+            <div class="hero-accordion-container">
+                <!-- Column 1 -->
+                <div class="accordion-col active" data-col="1" role="tab" tabindex="0" aria-expanded="true" style="--bg-url: url('assets/4489e0716cb3cb92929faecda755bacdad6c645d.png')">
+                    <div class="col-content-wrapper">
+                        <div class="plus-icon-container">
+                            <img src="assets/icon/1.svg" alt="Concept Icon" class="accordion-icon">
+                        </div>
+                        <div class="col-title-rotate">
+                            <h2>• КОНЦЕПЦІЯ ПРОЕКТУВАННЯ</h2>
+                        </div>
+                        <div class="dot-indicator">
+                            <img src="assets/49307d69886bed7945ef29a51dacd76ccff549fe.svg" alt="Small dot" class="dot-small">
+                            <img src="assets/36fc694bbaa437da32b84da02718eb1b67594f5f.svg" alt="Large dot indicator" class="dot-active">
+                        </div>
+                    </div>
+                    <!-- Details shown on expand -->
+                    <div class="col-expanded-details">
+                        <p class="expanded-desc">Розробка унікальних планувань, ергономіки та концептуальних планів для оздоровчих SPA-зон преміум класу.</p>
+                        <a href="#contact" class="expanded-btn">
+                            <img src="assets/83a2aadaf1e148ec60e18530e302e14f262df498.svg" alt="Arrow">
+                            <span>Замовити</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="accordion-col" data-col="2" role="tab" tabindex="0" aria-expanded="false" style="--bg-url: url('assets/3526bda6ff4afbbad10eb03b461958b36982a674.png')">
+                    <div class="col-content-wrapper">
+                        <div class="plus-icon-container">
+                            <img src="assets/icon/2.svg" alt="Consulting Icon" class="accordion-icon">
+                        </div>
+                        <div class="col-title-rotate">
+                            <h2>• КОНСАЛТІНГ</h2>
+                        </div>
+                        <div class="dot-indicator">
+                            <img src="assets/49307d69886bed7945ef29a51dacd76ccff549fe.svg" alt="Small dot" class="dot-small">
+                            <img src="assets/36fc694bbaa437da32b84da02718eb1b67594f5f.svg" alt="Large dot indicator" class="dot-active">
+                        </div>
+                    </div>
+                    <div class="col-expanded-details">
+                        <p class="expanded-desc">Аналіз бізнес-моделей, підбір обладнання, оптимізація експлуатаційних витрат та проектування потоків гостей.</p>
+                        <a href="#contact" class="expanded-btn">
+                            <img src="assets/83a2aadaf1e148ec60e18530e302e14f262df498.svg" alt="Arrow">
+                            <span>Консультація</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="accordion-col" data-col="3" role="tab" tabindex="0" aria-expanded="false" style="--bg-url: url('assets/39b4178a59bf990c182c6c8a660c99b1b8a6c6e1.png')">
+                    <div class="col-content-wrapper">
+                        <div class="plus-icon-container">
+                            <img src="assets/icon/3.svg" alt="Building Icon" class="accordion-icon">
+                        </div>
+                        <div class="col-title-rotate">
+                            <h2>• БУДІВНИЦТВО</h2>
+                        </div>
+                        <div class="dot-indicator">
+                            <img src="assets/49307d69886bed7945ef29a51dacd76ccff549fe.svg" alt="Small dot" class="dot-small">
+                            <img src="assets/36fc694bbaa437da32b84da02718eb1b67594f5f.svg" alt="Large dot indicator" class="dot-active">
+                        </div>
+                    </div>
+                    <div class="col-expanded-details">
+                        <p class="expanded-desc">Авторський нагляд, будівництво під ключ із використанням преміальних та довговічних екологічних матеріалів.</p>
+                        <a href="#contact" class="expanded-btn">
+                            <img src="assets/83a2aadaf1e148ec60e18530e302e14f262df498.svg" alt="Arrow">
+                            <span>Розрахунок</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="accordion-col" data-col="4" role="tab" tabindex="0" aria-expanded="false" style="--bg-url: url('assets/0c77c54f721c4c1492e5e238d38df10a09e4b75e.png')">
+                    <div class="col-content-wrapper">
+                        <div class="plus-icon-container">
+                            <img src="assets/icon/4.svg" alt="Inventions Icon" class="accordion-icon">
+                        </div>
+                        <div class="col-title-rotate">
+                            <h2>• ВИНАХОДИ</h2>
+                        </div>
+                        <div class="dot-indicator">
+                            <img src="assets/49307d69886bed7945ef29a51dacd76ccff549fe.svg" alt="Small dot" class="dot-small">
+                            <img src="assets/36fc694bbaa437da32b84da02718eb1b67594f5f.svg" alt="Large dot indicator" class="dot-active">
+                        </div>
+                    </div>
+                    <div class="col-expanded-details">
+                        <p class="expanded-desc">Патентні рішення Balaban в автоматизації клімату, парогенерації та керуванні режимами ширяння.</p>
+                        <a href="#contact" class="expanded-btn">
+                            <img src="assets/83a2aadaf1e148ec60e18530e302e14f262df498.svg" alt="Arrow">
+                            <span>Презентація</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 5 -->
+                <div class="accordion-col" data-col="5" role="tab" tabindex="0" aria-expanded="false" style="--bg-url: url('assets/36f7a6d90b62af2419b9f090e5bcabce18d1a971.png')">
+                    <div class="col-content-wrapper">
+                        <div class="plus-icon-container">
+                            <img src="assets/icon/5.svg" alt="Brands Icon" class="accordion-icon">
+                        </div>
+                        <div class="col-title-rotate">
+                            <h2>• НАШІ БРЕНДИ</h2>
+                        </div>
+                        <div class="dot-indicator">
+                            <img src="assets/49307d69886bed7945ef29a51dacd76ccff549fe.svg" alt="Small dot" class="dot-small">
+                            <img src="assets/36fc694bbaa437da32b84da02718eb1b67594f5f.svg" alt="Large dot indicator" class="dot-active">
+                        </div>
+                    </div>
+                    <div class="col-expanded-details">
+                        <p class="expanded-desc">Управління франшизами та партнерськими мережами лазневих комплексів та брендів косметики.</p>
+                        <a href="#contact" class="expanded-btn">
+                            <img src="assets/83a2aadaf1e148ec60e18530e302e14f262df498.svg" alt="Arrow">
+                            <span>Детальніше</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 6 -->
+                <div class="accordion-col" data-col="6" role="tab" tabindex="0" aria-expanded="false" style="--bg-url: url('assets/94cfcea5db0d1480d510d659035986982d7d410e.png')">
+                    <div class="col-content-wrapper">
+                        <div class="plus-icon-container">
+                            <img src="assets/icon/6.svg" alt="Strategy Icon" class="accordion-icon">
+                        </div>
+                        <div class="col-title-rotate">
+                            <h2>• СТРАТЕГІЯ</h2>
+                        </div>
+                        <div class="dot-indicator">
+                            <img src="assets/49307d69886bed7945ef29a51dacd76ccff549fe.svg" alt="Small dot" class="dot-small">
+                            <img src="assets/36fc694bbaa437da32b84da02718eb1b67594f5f.svg" alt="Large dot indicator" class="dot-active">
+                        </div>
+                    </div>
+                    <div class="col-expanded-details">
+                        <p class="expanded-desc">Маркетинговий розвиток SPA-брендів, створення концепцій позиціонування та стратегічне масштабування.</p>
+                        <a href="#contact" class="expanded-btn">
+                            <img src="assets/83a2aadaf1e148ec60e18530e302e14f262df498.svg" alt="Arrow">
+                            <span>Обговорити</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Central Description overlay -->
+            <div class="hero-center-desc">
+                <p>студія, що не просто проектує лазні, а створює унікальні концепти поєднання відчуттів і бізнес-рішень</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MISSION & CREATIVE AGENCY -->
+        <section id="about" class="section-mission">
+            <div class="mission-wrapper">
+                <div class="mission-left">
+                    <h2 class="section-heading text-left">WE ARE A CREATIVE<br>AGENCY IN UA</h2>
+                    <div class="mission-action">
+                        <div class="action-link-btn">
+                            <img src="assets/83a2aadaf1e148ec60e18530e302e14f262df498.svg" alt="Next arrow">
+                            <span>Детальніше</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mission-center-vector">
+                    <img src="assets/b538748d8f6a1af2660e3192232d0e6910fd2c5c.svg" alt="Sleek connecting line">
+                </div>
+
+                <div class="mission-right">
+                    <h2 class="section-heading text-right">SPECIALIZING IN<br><span class="highlight-text">INNOVATION & ARCHITECT</span></h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SERVICES TITLE -->
+        <section id="services" class="section-services-intro">
+            <div class="services-intro-container">
+                <span class="section-label">[OUR SERVICES]</span>
+                <p class="services-intro-text">Практикуємо індивідуальний<br>підхід у кожному проєкті</p>
+            </div>
+            
+            <!-- Beautiful Arc/Curve Graphic Divider -->
+            <div class="section-curve-divider">
+                <img src="assets/813e179474bd06d92aa10a4058ddffc737aff015.svg" alt="Curve Divider line" class="arc-line">
+            </div>
+        </section>
+
+        <!-- SECTION 4: DIGITAL SYNAPSE (NEURAL NETWORK HOTSPOTS) -->
+        <section id="inventions" class="section-synapse">
+            <div class="synapse-bg-wrapper">
+                <img src="assets/332d0fa17f4e7c9051964a088da9d587b5aee6df.png" alt="Neural synapse background" class="synapse-bg-img">
+                <div class="synapse-gradient-top"></div>
+                <div class="synapse-gradient-bottom"></div>
+            </div>
+
+            <!-- Pulsing Hotspots positioned absolutely on top of BG -->
+            <!-- Hotspot 1 -->
+            <div class="synapse-hotspot hotspot-1 layout-up-right" data-id="1">
+                <img src="assets/40d91ef96cbdfa5320b39e009e9741c76d8c6e0c.svg" alt="Hotspot 1 Icon" class="hotspot-pulse-img">
+                <div class="hotspot-card-hover">
+                    <div class="corner-plus tl">+</div>
+                    <div class="corner-plus tr">+</div>
+                    <div class="corner-plus bl">+</div>
+                    <div class="corner-plus br">+</div>
+                    <div class="hover-card-img-wrapper">
+                        <img src="assets/509bbcfac927adc4f2de3a9946e60d207d366cde.png" alt="Smart SPA Control Preview" class="hover-card-img">
+                    </div>
+                </div>
+                <svg class="hotspot-connector-line" width="200" height="200">
+                    <line x1="30" y1="30" x2="135" y2="177" />
+                </svg>
+                <div class="hotspot-hover-text">
+                    <h3>Smart SPA Control</h3>
+                    <p>Інтегрована система автоматичного підтримання оптимального балансу вологості та температури.</p>
+                </div>
+            </div>
+
+            <!-- Hotspot 2 -->
+            <div class="synapse-hotspot hotspot-2 layout-down-right" data-id="2">
+                <img src="assets/adb51a27aaea7823f33fed0b1bd531dfabd2c2e1.svg" alt="Hotspot 2 Icon" class="hotspot-pulse-img">
+                <div class="hotspot-card-hover">
+                    <div class="corner-plus tl">+</div>
+                    <div class="corner-plus tr">+</div>
+                    <div class="corner-plus bl">+</div>
+                    <div class="corner-plus br">+</div>
+                    <div class="hover-card-img-wrapper">
+                        <img src="assets/3526bda6ff4afbbad10eb03b461958b36982a674.png" alt="Енергоефективність Preview" class="hover-card-img">
+                    </div>
+                </div>
+                <svg class="hotspot-connector-line" width="200" height="200">
+                    <line x1="30" y1="30" x2="135" y2="-60" />
+                </svg>
+                <div class="hotspot-hover-text">
+                    <h3>Енергоефективність</h3>
+                    <p>Рекуперація тепла стічних вод та вентиляційного повітря для економії до 40% енергії.</p>
+                </div>
+            </div>
+
+            <!-- Hotspot 3 -->
+            <div class="synapse-hotspot hotspot-3 layout-up-right" data-id="3">
+                <img src="assets/1093ebf403848f9af0843c0eb10bd137fdd7b4fe.svg" alt="Hotspot 3 Icon" class="hotspot-pulse-img">
+                <div class="hotspot-card-hover">
+                    <div class="corner-plus tl">+</div>
+                    <div class="corner-plus tr">+</div>
+                    <div class="corner-plus bl">+</div>
+                    <div class="corner-plus br">+</div>
+                    <div class="hover-card-img-wrapper">
+                        <img src="assets/d93f99a8b9362ff9b01e0a747fb811654d0bb406.png" alt="Мультисенсорний душ Preview" class="hover-card-img">
+                    </div>
+                </div>
+                <svg class="hotspot-connector-line" width="200" height="200">
+                    <line x1="30" y1="30" x2="135" y2="177" />
+                </svg>
+                <div class="hotspot-hover-text">
+                    <h3>Мультисенсорний душ</h3>
+                    <p>Світло- та звукотерапія, поєднана з точковим гідромасажем для повного розслаблення.</p>
+                </div>
+            </div>
+
+            <!-- Hotspot 4 -->
+            <div class="synapse-hotspot hotspot-4 layout-up-left" data-id="4">
+                <img src="assets/7090da687049988bef168067f2b1b557496c0df4.svg" alt="Hotspot 4 Icon" class="hotspot-pulse-img">
+                <div class="hotspot-card-hover">
+                    <div class="corner-plus tl">+</div>
+                    <div class="corner-plus tr">+</div>
+                    <div class="corner-plus bl">+</div>
+                    <div class="corner-plus br">+</div>
+                    <div class="hover-card-img-wrapper">
+                        <img src="assets/d40263d9b0390583cb822a9d7d096f82e1a159a6.png" alt="Вентиляція «Дихання лазні» Preview" class="hover-card-img">
+                    </div>
+                </div>
+                <svg class="hotspot-connector-line" width="200" height="200">
+                    <line x1="22.5" y1="22.5" x2="-102.5" y2="142.5" />
+                </svg>
+                <div class="hotspot-hover-text">
+                    <h3>Вентиляція «Дихання лазні»</h3>
+                    <p>Унікальна запатентована технологія подачі свіжого підігрітого повітря безпосередньо під обличчя гостя.</p>
+                </div>
+            </div>
+
+            <!-- Hotspot 5 -->
+            <div class="synapse-hotspot hotspot-5 layout-down-right" data-id="5">
+                <img src="assets/12670f689eaa524823bb6e16f90be34b710abeeb.svg" alt="Hotspot 5 Icon" class="hotspot-pulse-img">
+                <div class="hotspot-card-hover">
+                    <div class="corner-plus tl">+</div>
+                    <div class="corner-plus tr">+</div>
+                    <div class="corner-plus bl">+</div>
+                    <div class="corner-plus br">+</div>
+                    <div class="hover-card-img-wrapper">
+                        <img src="assets/0c77c54f721c4c1492e5e238d38df10a09e4b75e.png" alt="Крижані генератори Preview" class="hover-card-img">
+                    </div>
+                </div>
+                <svg class="hotspot-connector-line" width="200" height="200">
+                    <line x1="22.5" y1="22.5" x2="120" y2="152.5" />
+                </svg>
+                <div class="hotspot-hover-text">
+                    <h3>Крижані генератори</h3>
+                    <p>Створення м'якої снігової крихти преміальної якості для контрастних процедур.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Curve Divider -->
+        <div class="curve-separator-wrapper">
+            <img src="assets/813e179474bd06d92aa10a4058ddffc737aff015.svg" alt="Curve Divider line" class="arc-line">
+        </div>
+
+        <!-- SECTION 5: PROJECTS TABS & GALLERY -->
+        <section id="projects-section" class="section-projects">
+            <!-- Background Images for Preloading & Switching -->
+            <div class="projects-bg-container">
+                <div class="projects-bg active" data-project-bg="1" style="background-image: url('assets/4489e0716cb3cb92929faecda755bacdad6c645d.png');"></div>
+                <div class="projects-bg" data-project-bg="2" style="background-image: url('assets/3526bda6ff4afbbad10eb03b461958b36982a674.png');"></div>
+                <div class="projects-bg" data-project-bg="3" style="background-image: url('assets/39b4178a59bf990c182c6c8a660c99b1b8a6c6e1.png');"></div>
+                <div class="projects-bg" data-project-bg="4" style="background-image: url('assets/0c77c54f721c4c1492e5e238d38df10a09e4b75e.png');"></div>
+                <div class="projects-bg" data-project-bg="5" style="background-image: url('assets/36f7a6d90b62af2419b9f090e5bcabce18d1a971.png');"></div>
+                <div class="projects-bg" data-project-bg="6" style="background-image: url('assets/94cfcea5db0d1480d510d659035986982d7d410e.png');"></div>
+                <div class="projects-overlay"></div>
+            </div>
+
+            <!-- Top info content -->
+            <div class="projects-header-info">
+                <span class="projects-tag">[Projects]</span>
+                <div class="projects-main-title">
+                    <p class="title-main">Balaban Innovations – </p>
+                    <p class="title-sub">ЦЕ новИЙ ПОГЛЯД на spa</p>
+                </div>
+            </div>
+
+            <!-- The Tabs container -->
+            <div class="projects-tabs-container">
+                <!-- Floating Glassmorphic Highlighter Box -->
+                <div class="projects-tab-highlighter" id="tab-highlighter">
+                    <span class="highlighter-text" id="highlighter-text">Дикі лазні</span>
+                </div>
+
+                <!-- Tab Row 1 -->
+                <div class="project-tab-item active" data-index="1" data-label="Дикі лазні" role="tab" tabindex="0" aria-selected="true">
+                    <span class="tab-num">1</span>
+                    <span class="tab-title">Дикі лазні</span>
+                </div>
+
+                <!-- Tab Row 2 -->
+                <div class="project-tab-item" data-index="2" data-label="Міські лазні" role="tab" tabindex="0" aria-selected="false">
+                    <span class="tab-num">2</span>
+                    <span class="tab-title">Міські лазні</span>
+                </div>
+
+                <!-- Tab Row 3 -->
+                <div class="project-tab-item" data-index="3" data-label="SPA-комплекси" role="tab" tabindex="0" aria-selected="false">
+                    <span class="tab-num">3</span>
+                    <span class="tab-title">SPA-комплекси</span>
+                </div>
+
+                <!-- Tab Row 4 -->
+                <div class="project-tab-item" data-index="4" data-label="Льодяні кімнати" role="tab" tabindex="0" aria-selected="false">
+                    <span class="tab-num">4</span>
+                    <span class="tab-title">Льодяні кімнати</span>
+                </div>
+
+                <!-- Tab Row 5 -->
+                <div class="project-tab-item" data-index="5" data-label="Лазні" role="tab" tabindex="0" aria-selected="false">
+                    <span class="tab-num">5</span>
+                    <span class="tab-title">Лазні</span>
+                </div>
+
+                <!-- Tab Row 6 -->
+                <div class="project-tab-item" data-index="6" data-label="Снігові кімнати" role="tab" tabindex="0" aria-selected="false">
+                    <span class="tab-num">6</span>
+                    <span class="tab-title">Снігові кімнати</span>
+                </div>
+            </div>
+
+            <!-- Footer Action Button inside projects -->
+            <div class="projects-bottom-action">
+                <a href="projects.html" class="btn-all-projects" aria-label="View all projects" style="text-decoration: none;">
+                    <img src="assets/492984579982e7e201f6136fcaa336d7c8a6cb0a.svg" alt="Next Arrow Icon">
+                    <span>Всі проєкти</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Dynamic Curve Divider -->
+        <div class="curve-separator-wrapper">
+            <img src="assets/813e179474bd06d92aa10a4058ddffc737aff015.svg" alt="Curve Divider line" class="arc-line">
+        </div>
+
+        <!-- SECTION 6: NEWS & BLOG SLIDER -->
+        <section id="blog" class="section-blog">
+            <div class="blog-header">
+                <span class="blog-label">[NEWS&BLOG]</span>
+                <h2 class="blog-title">НАШ БЛОГ</h2>
+                <a href="blog.html" class="blog-all-link">
+                    <span>До блогу</span>
+                    <img src="assets/b638fb6e37325e2d7e33546ebb0ddf60fab76923.svg" alt="Right chevron">
+                </a>
+            </div>
+
+            <!-- Carousel Slider Container -->
+            <div class="blog-carousel-wrapper" id="blog-carousel">
+                <div class="blog-carousel-track" id="blog-carousel-track">
+                    
+                    <!-- Slide Card 1 -->
+                    <a href="article.html" class="blog-card text-card" style="text-decoration: none;">
+                        <div class="card-meta">
+                            <span class="card-tag">
+                                <img src="assets/3acdbb1b82503f1f1cc72d9b58a164f7cd216933.svg" alt="Dot" class="meta-dot">
+                                TEAM CASES
+                            </span>
+                            <span class="card-date">[ 17/04/2025 ]</span>
+                        </div>
+                        <h3 class="card-title">Новий готельно-розважальний комплекс <span class="uppercase">Spa Name UKRAINE</span></h3>
+                        
+                        <div class="card-image-holder circle-mask">
+                            <img src="assets/509bbcfac927adc4f2de3a9946e60d207d366cde.png" alt="Spa Name Ukraine interior design mockup">
+                        </div>
+
+                        <div class="card-bottom-icon">
+                            <img src="assets/0ac54c22ea4022c3f72be2ccc95c9d8e1de3f085.svg" alt="Arrow circular overlay" class="action-ring-icon">
+                        </div>
+                    </a>
+
+                    <!-- Slide Card 2: Full Image Cover -->
+                    <a href="article.html" class="blog-card image-cover-card">
+                        <img src="assets/032271e1f4c944d5912679cc836fcaffb5b8a53f.png" alt="MArbele Sennaya spa bath environment" class="cover-bg">
+                        <div class="blog-card-overlay"></div>
+                    </a>
+
+                    <!-- Slide Card 3 -->
+                    <a href="article.html" class="blog-card text-card" style="text-decoration: none;">
+                        <div class="card-meta">
+                            <span class="card-tag">
+                                <img src="assets/3acdbb1b82503f1f1cc72d9b58a164f7cd216933.svg" alt="Dot" class="meta-dot">
+                                TEAM CASES
+                            </span>
+                            <span class="card-date">[ 17/04/2025 ]</span>
+                        </div>
+                        <h3 class="card-title">Новий готельно-розважальний комплекс <span class="uppercase">Spa Name UKRAINE</span></h3>
+                        
+                        <div class="card-image-holder circle-mask">
+                            <img src="assets/d40263d9b0390583cb822a9d7d096f82e1a159a6.png" alt="Spa Name Ukraine steam room layout">
+                        </div>
+
+                        <div class="card-bottom-icon">
+                            <img src="assets/cde4782b3759791dd2ca4e3a070dd864344d8d7e.svg" alt="Arrow circular overlay" class="action-ring-icon">
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Draggable gesture prompt for touch devices -->
+            <div class="drag-indicator-mobile">
+                <img src="assets/6f034564aff2f6075e18f11bdc1bf9fc0bf45d2d.svg" alt="Tap Gesture" class="gesture-icon">
+                <span>Проведіть пальцем</span>
+            </div>
+        </section>
+
+        <!-- Dynamic Curve Divider -->
+        <div class="curve-separator-wrapper">
+            <img src="assets/813e179474bd06d92aa10a4058ddffc737aff015.svg" alt="Curve Divider line" class="arc-line">
+        </div>
+
+        <!-- SECTION 7: INTERACTIVE CONTACT FORM -->
+        <section id="contact" class="section-contact">
+            <span class="contact-label">[CONTACT US]</span>
+            
+            <form id="interactive-contact-form" class="immersive-form">
+                <div class="form-row-text">
+                    <span>Привіт, Balaban Studio.</span>
+                </div>
+                
+                <div class="form-row-inputs flex-wrap">
+                    <span>Я</span>
+                    <div class="input-glow-container">
+                        <input type="text" id="user-name" name="name" placeholder="Ваше ім'я" required autocomplete="name" aria-label="Ваше ім'я">
+                    </div>
+                    <span>&</span>
+                    <span>я цікавлюсь</span>
+                    <div class="select-glow-container">
+                        <select id="user-interest" name="interest" required aria-label="Тема вашого інтересу">
+                            <option value="" disabled selected hidden>Оберіть варіант</option>
+                            <option value="concept">Проектування</option>
+                            <option value="consulting">Консалтинг</option>
+                            <option value="building">Будівництво</option>
+                            <option value="inventions">Винаходи</option>
+                        </select>
+                        <div class="custom-select-arrow">
+                            <img src="assets/dfa8a68a2ae38643f6e6596ad59b6bee7cdd1ae7.svg" alt="Arrow down" class="select-arrow-img">
+                        </div>
+                    </div>
+                    <span>.</span>
+                </div>
+
+                <div class="form-row-inputs flex-wrap">
+                    <span>Відправте КП на</span>
+                    <div class="input-glow-container email-container">
+                        <input type="email" id="user-email" name="email" placeholder="Ваш e-mail" required autocomplete="email" aria-label="Ваша електронна пошта">
+                    </div>
+                    <span>.</span>
+                    <span>Дякую.</span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-submit-container">
+                    <button type="submit" class="submit-circle-btn" id="submit-btn" aria-label="Send application request">
+                        <img src="assets/38a7f70ab58c1f766e4d51cb854c264f225248af.svg" alt="Button circle background" class="submit-circle-bg">
+                        <div class="submit-btn-text">
+                            <span>ЗАЛИШИТИ</span>
+                            <span>ЗАЯВКУ</span>
+                        </div>
+                    </button>
+                </div>
+            </form>
+            
+            <div class="bottom-form-divider">
+                <img src="assets/6139a5228d45df6b75e8d656e9d3b77785f833e1.svg" alt="Horizontal line decoration" class="horizontal-decor-line">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FUTER (FOOTER) -->
+    <footer class="main-footer">
+        
+        <!-- Vanta Fog Background -->
+        <div id="footer-vanta-bg" style="position: absolute; inset: 0; z-index: 1; pointer-events: none;"></div>
+
+        <!-- Curve backdrop SVG path -->
+        <div class="footer-curve-backdrop" style="z-index: 2;">
+            <img src="assets/c9de35330a1ec004775dedee46743151b829124f.svg" alt="Vector curve divider" class="curve-backdrop-img">
+        </div>
+
+        <!-- Premium Grit Noise Overlay -->
+        <div class="footer-noise-overlay" style="background-image: url('assets/g0QcWrxr87K0ufOxIUFBakwYA8.png');"></div>
+
+        <!-- Content Overlay -->
+        <div class="footer-content">
+            
+            <!-- Columns Grid -->
+            <div class="footer-grid">
+                
+                <!-- Left Column: Project filters -->
+                <div class="footer-links-col align-left">
+                    <a href="projects.html?filter=wild" class="footer-link uppercase">Дикі лазні</a>
+                    <a href="projects.html?filter=urban" class="footer-link uppercase">Міські лазні</a>
+                    <a href="projects.html?filter=ice" class="footer-link uppercase">Льодяні кімнати</a>
+                    <a href="projects.html?filter=spa" class="footer-link uppercase">SPA-комплекси</a>
+                    <a href="projects.html?filter=all" class="footer-link uppercase">ВСІ</a>
+                </div>
+
+                <!-- Center Column: Branding logo, address and social links -->
+                <div class="footer-center-col">
+                    <div class="footer-logo">
+                        <img src="assets/logo_white.svg" alt="Balaban logo symbol" class="footer-logo-img">
+                    </div>
+                    
+                    <div class="footer-address">
+                        <p>Address</p>
+                        <p>Odessa Ukraine</p>
+                        <p>Shevchenka 58, office 404</p>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon">
+                            <img src="assets/fcf46cfc7739fdbb090897f9de7036244121c4f0.svg" alt="Instagram background circle" class="soc-circle">
+                            <img src="assets/1922f6308871868701172b20c31d0281fa9011e2.svg" alt="Instagram icon symbol" class="soc-inner">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/8be816f251de532df5c406552d134b9bc26a128a.svg" alt="Telegram logo icon" class="tele-img">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Site navigation links -->
+                <div class="footer-links-col align-right">
+                    <a href="index.html#hero" class="footer-link uppercase active">ПОСЛУГИ</a>
+                    <a href="index.html#about" class="footer-link uppercase">ПРО НАС</a>
+                    <a href="blog.html" class="footer-link uppercase">БЛОГ</a>
+                    <a href="index.html#inventions" class="footer-link uppercase">Винаходи</a>
+                </div>
+            </div>
+
+            <!-- Large Decorative Text -->
+            <div class="footer-branding-big">
+                <span class="serif-brand-text">Balaban</span>
+                <div class="serif-studio-text">
+                    <span>studio</span>
+                    <span class="copyright-symbol">©</span>
+                </div>
+            </div>
+
+            <!-- Footer copyright bottom row -->
+            <div class="footer-bottom-row">
+                <span>© 2025. All rights reserved</span>
+                <span>Privacy Policy</span>
+                <span>Website by Lena Moldovanova</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Unused SVG filters removed for performance -->
+
+    <!-- Vanta.js Scripts -->
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.fog.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            VANTA.FOG({
+                el: "#footer-vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                highlightColor: 0xff8700,
+                midtoneColor: 0x111111,
+                lowlightColor: 0xfa0040,
+                baseColor: 0x0,
+                blurFactor: 0.90,
+                zoom: 0.40
+            });
+        });
+    </script>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 33150">
+<foreignObject x="-7" y="-7" width="74" height="74"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(3.5px);clip-path:url(#bgblur_0_1_2120_clip_path);height:100%;width:100%"></div></foreignObject><circle id="Ellipse 447" data-figma-bg-blur-radius="7" cx="30" cy="30" r="29.5" fill="url(#paint0_linear_1_2120)" stroke="url(#paint1_linear_1_2120)"/>
+<g id="add-sharp" clip-path="url(#clip1_1_2120)">
+<path id="Vector" d="M37.4005 26.621L38.0933 26.221L37.2933 24.8354L36.6005 25.2354L37.0005 25.9282L37.4005 26.621ZM26.7651 22.6L26.3651 21.9072L24.9794 22.7072L25.3794 23.4L26.0723 23L26.7651 22.6ZM37.0005 25.9282L36.6005 25.2354L22.7441 33.2354L23.1441 33.9282L23.5441 34.621L37.4005 26.621L37.0005 25.9282ZM34.0723 36.8564L34.7651 36.4564L26.7651 22.6L26.0723 23L25.3794 23.4L33.3794 37.2564L34.0723 36.8564Z" fill="var(--stroke-0, white)"/>
+</g>
+</g>
+<defs>
+<clipPath id="bgblur_0_1_2120_clip_path" transform="translate(7 7)"><circle cx="30" cy="30" r="29.5"/>
+</clipPath><linearGradient id="paint0_linear_1_2120" x1="30" y1="4.7311e-08" x2="-7.2865" y2="38.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.5"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_2120" x1="30" y1="0" x2="30" y2="60" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip1_1_2120">
+<rect width="16" height="16" fill="white" transform="translate(33.0005 19) rotate(60)"/>
+</clipPath>
+</defs>
+</svg>

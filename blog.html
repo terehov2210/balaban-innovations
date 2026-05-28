@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наш Блог | Balaban Innovations</title>
+    
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Блог Balaban Innovations - ділимося порадами, новинами, архітектурними кейсами та інноваціями у сфері SPA та велнесу в Україні.">
+    <meta name="keywords" content="Balaban, Блог, Новини, Поради, Лазні, SPA, Дизайн, Архітектура, Україна">
+    <meta name="author" content="Balaban Innovations">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Fullscreen Menu Overlay -->
+    <div id="menu-overlay" class="menu-overlay">
+        <div class="menu-overlay-bg">
+            <img src="assets/b7ed6073dbf8d43540d24dee2834eb2a854281fa.svg" alt="Background" class="menu-bg-img">
+        </div>
+        
+        <!-- Menu Header -->
+        <div class="menu-header">
+            <div class="lang-selector">
+                <button class="lang-btn active" id="lang-ua">UA</button>
+                <button class="lang-btn" id="lang-en">EN</button>
+            </div>
+            <button class="menu-close-btn" id="menu-close-btn" aria-label="Close menu">
+                <img src="assets/398cfaea7eee8ed62144285ddd6e5605c5b04856.svg" alt="Close">
+            </button>
+        </div>
+
+        <!-- Right panel: Scrolling Image Columns -->
+        <div class="menu-images-panel">
+            <div class="menu-images-column col-left">
+                <div class="menu-image-card">
+                    <img src="assets/77f8e776a694dca5a559ceb76de25b1e5a9089a1.png" alt="Menu Image 1">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/55d1c2cc204359dd9e45816ab3c95001c6ae1427.png" alt="Menu Image 2">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/9094ab5f846298b0c5bd03897859955047ce2816.png" alt="Menu Image 3">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/77f8e776a694dca5a559ceb76de25b1e5a9089a1.png" alt="Menu Image 1">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/55d1c2cc204359dd9e45816ab3c95001c6ae1427.png" alt="Menu Image 2">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/9094ab5f846298b0c5bd03897859955047ce2816.png" alt="Menu Image 3">
+                </div>
+            </div>
+            <div class="menu-images-column col-right">
+                <div class="menu-image-card">
+                    <img src="assets/71375e590e744840451a62a6d9a34f304d847728.png" alt="Menu Image 4">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/abb77b08b35be00ae62efe5329778d932fa464a5.png" alt="Menu Image 5">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/2c53e1f0eac8359384a4a141d0f98fcec2762da8.png" alt="Menu Image 6">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/71375e590e744840451a62a6d9a34f304d847728.png" alt="Menu Image 4">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/abb77b08b35be00ae62efe5329778d932fa464a5.png" alt="Menu Image 5">
+                </div>
+                <div class="menu-image-card">
+                    <img src="assets/2c53e1f0eac8359384a4a141d0f98fcec2762da8.png" alt="Menu Image 6">
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Content Columns -->
+        <div class="menu-content">
+            <div class="menu-text-panel">
+                <div class="menu-nav-links">
+                    <div class="nav-item">
+                        <a href="index.html#about" class="main-link">ПРО нас</a>
+                    </div>
+                    <div class="nav-item has-arrow">
+                        <a href="index.html#services" class="main-link">КОНЦЕПЦІЯ</a>
+                        <img src="assets/88a6d8dc511fc79394a28614ff3c10b4de8e8c76.svg" alt="Arrow" class="nav-arrow">
+                    </div>
+                    <div class="nav-item">
+                        <a href="index.html#inventions" class="main-link">ВИНАХОДИ</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="blog.html" class="main-link">БЛОГ</a>
+                    </div>
+                </div>
+
+                <div class="menu-services-list">
+                    <a href="index.html#hero">ПРОЕКТУВАННЯ</a>
+                    <a href="index.html#hero">КОНСАЛТІНГ</a>
+                    <a href="index.html#hero">БУДІВНИЦТВО</a>
+                </div>
+
+                <div class="menu-sub-links">
+                    <a href="projects.html?filter=wild">Дикі лазні</a>
+                    <a href="projects.html?filter=urban">Міські лазні</a>
+                    <a href="projects.html?filter=spa">SPA-комплекси</a>
+                    <a href="projects.html?filter=ice">Льодяні кімнати</a>
+                    <a href="projects.html?filter=all">ВСІ</a>
+                </div>
+
+                <div class="menu-actions-column">
+                    <div class="menu-socials">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <img src="assets/5a72bde99e2ba28123fd57d9227339618eaa6743.svg" alt="Instagram circle" class="soc-circle">
+                            <img src="assets/1922f6308871868701172b20c31d0281fa9011e2.svg" alt="Instagram" class="soc-inner">
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Telegram">
+                            <img src="assets/8b938696fba03acb11511bf61ef60d412414abe4.svg" alt="Telegram" class="tele-img">
+                        </a>
+                    </div>
+                    
+                    <div class="menu-actions-list">
+                        <div class="media-btn video-trigger">
+                            <img src="assets/7ec2c73a644844e945f4e90162124eac5f176ad1.svg" alt="Play" class="action-icon">
+                            <span>VIDEO ABOUT US</span>
+                        </div>
+                        <div class="media-btn download-trigger">
+                            <img src="assets/6b8459ab409b63af54765745b5524b6369e088fa.svg" alt="Download" class="action-icon">
+                            <div class="action-text">
+                                <span>DOWNLOAD</span>
+                                <span>PRESENTATION</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-copyright">
+            <span>Всі права захищені © 2024 balaban.com</span>
+            <span>Політика конфіденційності</span>
+            <span>Сайт розроблений web studio</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html" aria-label="Balaban Innovations Logo">
+                    <img src="assets/logo_white.svg" alt="Balaban logo">
+                </a>
+            </div>
+            
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Night Mode">
+                <img src="assets/95f050aa4bd27f620da8c90e169b18f056b86ac4.svg" alt="Night theme icon">
+            </button>
+            
+            <button class="menu-trigger-btn" id="menu-trigger-btn" aria-label="Open menu">
+                <span class="menu-text">MENU</span>
+                <img src="assets/cae1d36d2cbd5950b94bba01264b081278f1739e.svg" alt="Burger Menu Icon">
+            </button>
+        </div>
+    </header>
+
+    <main class="subpage-main">
+        <div class="subpage-container">
+            
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Головна</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current" aria-current="page">Блог</span>
+            </nav>
+
+            <!-- Page Title -->
+            <div class="subpage-header">
+                <h1 class="page-title uppercase"><span>BALABAN</span> <span class="highlight-text font-serif">BLOG</span></h1>
+            </div>
+
+            <!-- Double-row Tags Filter -->
+            <div class="blog-tags-filter">
+                <div class="tags-row">
+                    <button class="tag-btn active" data-tag="all">Всі 55</button>
+                    <button class="tag-btn" data-tag="news">Новини 10</button>
+                    <button class="tag-btn" data-tag="tips">Поради 8</button>
+                    <button class="tag-btn" data-tag="baths">Лазні 7</button>
+                </div>
+                <div class="tags-row">
+                    <button class="tag-btn" data-tag="spa">Spa-центри 12</button>
+                    <button class="tag-btn" data-tag="interiors">Інтер'єри 3</button>
+                    <button class="tag-btn" data-tag="business">Про бізнес 9</button>
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid" id="blog-grid">
+                
+                <!-- Card 1 -->
+                <div class="blog-grid-card" data-tags="news spa">
+                    <a href="article.html" class="blog-card-link">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">TEAM CASES</span>
+                            <span class="blog-card-date">[ 17/04/2025 ]</span>
+                        </div>
+                        <h3 class="blog-card-title">Новий готельно-розважальний комплекс Spa Name UKRAINE</h3>
+                        <div class="blog-card-image circle-mask">
+                            <img src="assets/509bbcfac927adc4f2de3a9946e60d207d366cde.png" alt="Spa Name Ukraine architecture render">
+                        </div>
+                        <div class="blog-card-footer">
+                            <span class="blog-card-readtime">Читати • 8 хв</span>
+                            <div class="blog-card-arrow">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <circle cx="9" cy="9" r="8.5" stroke="currentColor"/>
+                                    <path d="M6 12L12 6M12 6H8M12 6V10" stroke="currentColor" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="blog-grid-card" data-tags="tips">
+                    <a href="article.html" class="blog-card-link">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">ADVICE</span>
+                            <span class="blog-card-date">[ 03/09/2025 ]</span>
+                        </div>
+                        <h3 class="blog-card-title">Поради щодо вибору матеріалів для вашої особистої лазні</h3>
+                        <div class="blog-card-image circle-mask">
+                            <img src="assets/032271e1f4c944d5912679cc836fcaffb5b8a53f.png" alt="Premium construction wood and stones">
+                        </div>
+                        <div class="blog-card-footer">
+                            <span class="blog-card-readtime">Читати • 6 хв</span>
+                            <div class="blog-card-arrow">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <circle cx="9" cy="9" r="8.5" stroke="currentColor"/>
+                                    <path d="M6 12L12 6M12 6H8M12 6V10" stroke="currentColor" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="blog-grid-card" data-tags="news">
+                    <a href="article.html" class="blog-card-link">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">TEAM CASES</span>
+                            <span class="blog-card-date">[ 15/10/2025 ]</span>
+                        </div>
+                        <h3 class="blog-card-title">Зустрічайте наш додаток у App Store</h3>
+                        <div class="blog-card-image circle-mask">
+                            <img src="assets/d40263d9b0390583cb822a9d7d096f82e1a159a6.png" alt="App Store mobile screen visualization">
+                        </div>
+                        <div class="blog-card-footer">
+                            <span class="blog-card-readtime">Читати • 4 хв</span>
+                            <div class="blog-card-arrow">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <circle cx="9" cy="9" r="8.5" stroke="currentColor"/>
+                                    <path d="M6 12L12 6M12 6H8M12 6V10" stroke="currentColor" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="blog-grid-card" data-tags="interiors spa">
+                    <a href="article.html" class="blog-card-link">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">DESIGN</span>
+                            <span class="blog-card-date">[ 12/11/2025 ]</span>
+                        </div>
+                        <h3 class="blog-card-title">Інноваційне освітлення у сучасних SPA: секрети проектування</h3>
+                        <div class="blog-card-image circle-mask">
+                            <img src="assets/71375e590e744840451a62a6d9a34f304d847728.png" alt="SPA lightning concepts">
+                        </div>
+                        <div class="blog-card-footer">
+                            <span class="blog-card-readtime">Читати • 5 хв</span>
+                            <div class="blog-card-arrow">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <circle cx="9" cy="9" r="8.5" stroke="currentColor"/>
+                                    <path d="M6 12L12 6M12 6H8M12 6V10" stroke="currentColor" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="blog-grid-card" data-tags="business">
+                    <a href="article.html" class="blog-card-link">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">BUSINESS</span>
+                            <span class="blog-card-date">[ 28/11/2025 ]</span>
+                        </div>
+                        <h3 class="blog-card-title">Як відкрити успішний спа-бізнес: ключові помилки та поради</h3>
+                        <div class="blog-card-image circle-mask">
+                            <img src="assets/abb77b08b35be00ae62efe5329778d932fa464a5.png" alt="Wellness business financial planning">
+                        </div>
+                        <div class="blog-card-footer">
+                            <span class="blog-card-readtime">Читати • 7 хв</span>
+                            <div class="blog-card-arrow">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <circle cx="9" cy="9" r="8.5" stroke="currentColor"/>
+                                    <path d="M6 12L12 6M12 6H8M12 6V10" stroke="currentColor" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="blog-grid-card" data-tags="baths">
+                    <a href="article.html" class="blog-card-link">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">CONCEPTS</span>
+                            <span class="blog-card-date">[ 05/12/2025 ]</span>
+                        </div>
+                        <h3 class="blog-card-title">Індивідуальний підхід: створення банних концепцій</h3>
+                        <div class="blog-card-image circle-mask">
+                            <img src="assets/2c53e1f0eac8359384a4a141d0f98fcec2762da8.png" alt="Sauna interior spatial planning">
+                        </div>
+                        <div class="blog-card-footer">
+                            <span class="blog-card-readtime">Читати • 5 хв</span>
+                            <div class="blog-card-arrow">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <circle cx="9" cy="9" r="8.5" stroke="currentColor"/>
+                                    <path d="M6 12L12 6M12 6H8M12 6V10" stroke="currentColor" stroke-width="1.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-num active">1</a>
+                <a href="#" class="page-num">2</a>
+                <a href="#" class="page-num">3</a>
+                <span class="page-dots">...</span>
+                <a href="#" class="page-num">4</a>
+                <a href="#" class="page-arrow" aria-label="Next Page">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M1 9L9 1M9 1H2M9 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FUTER (FOOTER) -->
+    <footer class="main-footer">
+        <!-- Vanta Fog Background -->
+        <div id="footer-vanta-bg" style="position: absolute; inset: 0; z-index: 1; pointer-events: none;"></div>
+
+        <!-- Curve backdrop SVG path -->
+        <div class="footer-curve-backdrop" style="z-index: 2;">
+            <img src="assets/c9de35330a1ec004775dedee46743151b829124f.svg" alt="Vector curve divider" class="curve-backdrop-img">
+        </div>
+
+        <!-- Premium Grit Noise Overlay -->
+        <div class="footer-noise-overlay" style="background-image: url('assets/g0QcWrxr87K0ufOxIUFBakwYA8.png');"></div>
+
+        <!-- Content Overlay -->
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- Left Column -->
+                <div class="footer-links-col align-left">
+                    <a href="index.html#projects-section" class="footer-link uppercase">Дикі лазні</a>
+                    <a href="index.html#projects-section" class="footer-link uppercase">Міські лазні</a>
+                    <a href="index.html#projects-section" class="footer-link uppercase">Льодяні кімнати</a>
+                    <a href="index.html#projects-section" class="footer-link uppercase">SPA-комплекси</a>
+                    <a href="index.html#projects-section" class="footer-link uppercase">ВСІ</a>
+                </div>
+
+                <!-- Center Column -->
+                <div class="footer-center-col">
+                    <div class="footer-logo">
+                        <img src="assets/logo_white.svg" alt="Balaban logo symbol" class="footer-logo-img">
+                    </div>
+                    
+                    <div class="footer-address">
+                        <p>Address</p>
+                        <p>Odessa Ukraine</p>
+                        <p>Shevchenka 58, office 404</p>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon">
+                            <img src="assets/fcf46cfc7739fdbb090897f9de7036244121c4f0.svg" alt="Instagram background circle" class="soc-circle">
+                            <img src="assets/1922f6308871868701172b20c31d0281fa9011e2.svg" alt="Instagram icon symbol" class="soc-inner">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/8be816f251de532df5c406552d134b9bc26a128a.svg" alt="Telegram logo icon" class="tele-img">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="footer-links-col align-right">
+                    <a href="index.html#hero" class="footer-link uppercase">ПОСЛУГИ</a>
+                    <a href="index.html#about" class="footer-link uppercase">ПРО НАС</a>
+                    <a href="blog.html" class="footer-link uppercase active">БЛОГ</a>
+                    <a href="index.html#inventions" class="footer-link uppercase">Винаходи</a>
+                </div>
+            </div>
+
+            <!-- Large Decorative Text -->
+            <div class="footer-branding-big">
+                <span class="serif-brand-text">Balaban</span>
+                <div class="serif-studio-text">
+                    <span>studio</span>
+                    <span class="copyright-symbol">©</span>
+                </div>
+            </div>
+
+            <!-- Footer copyright bottom row -->
+            <div class="footer-bottom-row">
+                <span>© 2025. All rights reserved</span>
+                <span>Privacy Policy</span>
+                <span>Website by Lena Moldovanova</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanta.js Scripts -->
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.fog.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            VANTA.FOG({
+                el: "#footer-vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                highlightColor: 0xff8700,
+                midtoneColor: 0x111111,
+                lowlightColor: 0xfa0040,
+                baseColor: 0x0,
+                blurFactor: 0.90,
+                zoom: 0.40
+            });
+
+            // Blog tags filtering logic
+            const tagBtns = document.querySelectorAll('.tag-btn');
+            const blogCards = document.querySelectorAll('.blog-grid-card');
+
+            tagBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tagBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-tag');
+
+                    blogCards.forEach(card => {
+                        const cardTags = card.getAttribute('data-tags').split(' ');
+                        if (filter === 'all' || cardTags.includes(filter)) {
+                            card.style.display = '';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0) scale(1)';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(15px) scale(0.98)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>
