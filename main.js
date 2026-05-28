@@ -458,3 +458,32 @@ inlineStyles.textContent = `
     }
 `;
 document.head.appendChild(inlineStyles);
+
+// 6. Load and animate background plan SVG
+document.addEventListener('DOMContentLoaded', () => {
+    const planContainers = document.querySelectorAll('.bg-plan-wrapper');
+    if (planContainers.length > 0) {
+        fetch('plan.svg')
+            .then(response => response.text())
+            .then(svgText => {
+                planContainers.forEach(container => {
+                    container.innerHTML = svgText;
+                    const svg = container.querySelector('svg');
+                    if (svg) {
+                        svg.setAttribute('width', '100%');
+                        svg.setAttribute('height', '100%');
+                        svg.removeAttribute('style'); // Clear any default inline styles
+                        
+                        // Setup stroke path animations with staggered delay
+                        const paths = svg.querySelectorAll('path, line, rect, circle, polygon');
+                        paths.forEach((path, idx) => {
+                            path.style.strokeDasharray = '500';
+                            path.style.strokeDashoffset = '500';
+                            path.style.animationDelay = `${(idx % 120) * 10}ms`;
+                        });
+                    }
+                });
+            })
+            .catch(err => console.error('Error loading background plan SVG:', err));
+    }
+});
