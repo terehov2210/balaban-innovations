@@ -3789,3 +3789,43 @@ body.light-theme .article-embedded-image {
 body.light-theme .image-caption {
     border-top-color: rgba(0, 0, 0, 0.08);
 }
+
+/* Force projects section to remain in dark theme styling even in light mode */
+body.light-theme .section-projects {
+    background-color: #0d0d0d;
+    --bg-dark: #0d0d0d;
+    --bg-card: rgba(255, 255, 255, 0.08);
+    --bg-card-hover: rgba(255, 255, 255, 0.15);
+    --text-white: #ffffff;
+    --text-gray: #8f8e98;
+    color: #ffffff;
+}
+
+body.light-theme .section-projects .projects-main-title {
+    color: #ffffff;
+}
+
+body.light-theme .section-projects .title-sub {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+body.light-theme .section-projects .project-tab-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.light-theme .section-projects .projects-tabs-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.light-theme .btn-all-projects {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.light-theme .btn-all-projects:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+body.light-theme .btn-all-projects img {
+    filter: none !important;
+}
