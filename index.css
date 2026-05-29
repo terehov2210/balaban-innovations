@@ -849,6 +849,11 @@ body {
     text-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+/* Wrapper is transparent on desktop so children keep absolute positioning */
+.hero-plus-row {
+    display: contents;
+}
+
 .hero-add-left,
 .hero-add-right {
     position: absolute;
@@ -2401,43 +2406,95 @@ body {
 @media (max-width: 768px) {
     .section-hero {
         height: auto;
-        min-height: 100dvh;
-        padding-bottom: 40px;
+        min-height: auto;
+        padding: 100px 20px 30px;
+        justify-content: flex-start;
         overflow: visible;
     }
 
     .main-header {
         padding: 0 20px;
     }
-    
+
     .main-header .header-container {
         height: 70px;
     }
-    
+
     .main-header.scrolled .header-container {
         height: 60px;
     }
-    
-    .hero-title-container {
-        top: 130px;
+
+    /* Clean dark hero backdrop on mobile */
+    .hero-bg-img {
+        opacity: 0.16;
+    }
+
+    .grid-diagonals,
+    .grid-line-vertical,
+    .grid-line-horizontal.accordion-top {
+        display: none;
+    }
+
+    .grid-bracket {
+        top: 86px;
         left: 20px;
+        right: 20px;
+        height: 24px;
+    }
+
+    /* Title + subtitle flow at top */
+    .hero-title-container {
+        position: static;
+        order: 1;
+        top: auto;
+        left: auto;
         transform: none;
-        text-align: left;
-        width: auto;
+        text-align: center;
+        width: 100%;
+        margin-top: 16px;
     }
-    
+
+    .hero-title {
+        font-size: clamp(40px, 13vw, 60px);
+        line-height: 1.0;
+        letter-spacing: 1.5px;
+    }
+
     .hero-center-desc {
-        width: 90%;
-        top: 250px;
+        position: static;
+        order: 2;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        margin: 16px auto 0;
+        text-align: center;
     }
-    
-    .bg-plan-container,
-    .bg-plan-wrapper {
-        display: none !important;
+
+    /* Plus decorator row */
+    .hero-plus-row {
+        display: flex;
+        order: 3;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 26px 0 22px;
     }
 
     .hero-add-left,
     .hero-add-right {
+        display: block !important;
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        width: 20px;
+        height: 20px;
+    }
+
+    .bg-plan-container,
+    .bg-plan-wrapper {
         display: none !important;
     }
 
@@ -2445,34 +2502,71 @@ body {
         padding: 70px 30px 40px 30px;
     }
 
-    /* Hero accordion converts to scrollable flex list on smaller screens */
+    /* Accordion as compact stacked cards */
     .hero-accordion-container {
+        order: 4;
         flex-direction: column;
         height: auto;
-        gap: 10px;
+        gap: 12px;
+        width: 100%;
+        max-width: none;
         background: none;
     }
-    
+
     .accordion-col {
         width: 100%;
         max-width: none;
-        height: 75px;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 20px;
-        border-radius: 0;
+        min-height: 70px;
+        height: auto;
+        flex: none;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        padding: 22px 26px;
+        border-radius: 4px;
+        background-color: var(--bg-card);
     }
-    
-    .accordion-col::before,
+
     .accordion-col::after,
     .accordion-col.active::before,
     .accordion-col.active::after {
         display: none !important;
     }
 
+    /* small dark notch on the left edge */
+    .accordion-col::before {
+        display: block !important;
+        content: '';
+        position: absolute;
+        left: -1px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 22px;
+        background-image: none;
+        background-color: var(--bg-dark);
+        opacity: 1;
+        z-index: 4;
+    }
+
+    .col-content-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 0 38px;
+        gap: 0;
+    }
+
     .plus-icon-container {
         display: flex !important;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
         width: 30px;
         height: 30px;
         justify-content: center;
@@ -2480,68 +2574,106 @@ body {
     }
 
     .accordion-icon {
-        width: 30px !important;
-        height: 30px !important;
+        width: 26px !important;
+        height: 26px !important;
     }
 
     .dot-indicator {
         display: none !important;
     }
-    
-    .accordion-col.active {
-        height: 250px;
-        flex: none;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-    
-    .col-content-wrapper {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        width: 100%;
-        height: auto;
-        align-items: center;
-        gap: 20px;
-    }
-    
-    .accordion-col.active .col-content-wrapper {
-        width: 100%;
-        justify-content: space-between;
-    }
-    
+
     .col-title-rotate {
         transform: none !important;
         margin: 0;
+        text-align: center;
     }
-    
+
     .col-title-rotate h2 {
-        font-size: 18px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
     }
-    
-    .dot-indicator {
-        margin-left: auto;
+
+    .accordion-col.active {
+        height: auto;
+        min-height: 70px;
+        flex: none;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
     }
-    
+
+    .accordion-col.active .col-content-wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* collapse hidden details so cards stay compact until tapped */
     .col-expanded-details {
         position: relative;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin-top: 20px;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        margin-top: 0;
         opacity: 0;
-        transform: translateY(10px);
+        transform: none;
         pointer-events: none;
-        transition: opacity 0.3s ease, transform 0.3s ease;
+        transition: max-height 0.45s ease, opacity 0.3s ease, margin-top 0.3s ease;
     }
-    
+
     .accordion-col.active .col-expanded-details {
+        max-height: 280px;
         opacity: 1;
-        transform: translateY(0);
+        margin-top: 16px;
         pointer-events: auto;
     }
-    
+
+    /* Mission: left heading + down arrow, right heading below (matches 360 design) */
+    .mission-wrapper {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "left arrow"
+            "right right";
+        gap: 60px 18px;
+        align-items: start;
+        text-align: left;
+    }
+
+    .mission-left {
+        grid-area: left;
+    }
+
+    .mission-right {
+        grid-area: right;
+    }
+
+    .section-heading.text-left {
+        text-align: left;
+    }
+
+    .section-heading.text-right {
+        text-align: right;
+    }
+
+    .mission-center-vector {
+        grid-area: arrow;
+        flex: none;
+        width: 40px;
+        max-width: 40px;
+        height: 56px;
+        margin: 10px 0 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .mission-center-vector img {
+        width: 56px;
+        transform: rotate(90deg);
+        transform-origin: top center;
+    }
+
     /* Synapse Hotspots */
     .section-synapse {
         height: 600px;
@@ -2635,16 +2767,12 @@ body {
     }
     
     /* Hero */
-    .hero-title {
-        font-size: 36px;
-    }
-    
     .accordion-col {
-        padding: 15px;
+        padding: 20px 22px;
     }
-    
+
     .col-title-rotate h2 {
-        font-size: 15px;
+        font-size: 14px;
     }
     
     /* Synapse */
