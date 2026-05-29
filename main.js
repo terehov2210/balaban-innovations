@@ -59,15 +59,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Theme Toggle (Night / Day Mode) with LocalStorage persistence
     const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleImg = themeToggle ? themeToggle.querySelector('img') : null;
+    
+    function updateThemeIcon(theme) {
+        if (themeToggleImg) {
+            if (theme === 'light-theme') {
+                themeToggleImg.src = 'assets/sun.svg';
+                themeToggleImg.alt = 'Day theme icon';
+            } else {
+                themeToggleImg.src = 'assets/95f050aa4bd27f620da8c90e169b18f056b86ac4.svg';
+                themeToggleImg.alt = 'Night theme icon';
+            }
+        }
+    }
     
     // Apply saved theme on load
     const savedTheme = localStorage.getItem('theme') || 'dark-theme';
     if (savedTheme === 'light-theme') {
         document.body.classList.remove('dark-theme');
         document.body.classList.add('light-theme');
+        updateThemeIcon('light-theme');
     } else {
         document.body.classList.remove('light-theme');
         document.body.classList.add('dark-theme');
+        updateThemeIcon('dark-theme');
     }
 
     if (themeToggle) {
@@ -76,10 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.classList.remove('light-theme');
                 document.body.classList.add('dark-theme');
                 localStorage.setItem('theme', 'dark-theme');
+                updateThemeIcon('dark-theme');
             } else {
                 document.body.classList.remove('dark-theme');
                 document.body.classList.add('light-theme');
                 localStorage.setItem('theme', 'light-theme');
+                updateThemeIcon('light-theme');
             }
             
             // Rotate the theme button icon
@@ -272,9 +289,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let trackX = 0;
 
     if (blogCarousel && carouselTrack) {
+        let wasDragged = false;
+        let startPageX = 0;
+
         // Track position for mouse custom follow cursor
         blogCarousel.addEventListener('mousemove', (e) => {
             if (window.innerWidth > 768) {
+                customCursor.style.display = 'flex';
                 customCursor.classList.add('visible');
                 // Calculate position relative to viewport
                 customCursor.style.left = `${e.clientX}px`;
@@ -284,12 +305,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         blogCarousel.addEventListener('mouseleave', () => {
             customCursor.classList.remove('visible');
+            customCursor.style.display = 'none';
             isDragging = false;
         });
 
         // Mouse drag event handlers
         blogCarousel.addEventListener('mousedown', (e) => {
             isDragging = true;
+            wasDragged = false;
+            startPageX = e.pageX;
             startX = e.pageX - carouselTrack.offsetLeft;
             scrollLeft = trackX;
             blogCarousel.style.cursor = 'grabbing';
@@ -305,6 +329,12 @@ document.addEventListener('DOMContentLoaded', () => {
         blogCarousel.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
             e.preventDefault();
+            
+            // If moved more than 5px, it is considered a drag gesture
+            if (Math.abs(e.pageX - startPageX) > 5) {
+                wasDragged = true;
+            }
+
             const x = e.pageX - carouselTrack.offsetLeft;
             const walk = (x - startX) * 1.5; // Drag sensitivity multiplier
             let newTransformX = scrollLeft + walk;
@@ -318,9 +348,24 @@ document.addEventListener('DOMContentLoaded', () => {
             carouselTrack.style.transform = `translateX(${trackX}px)`;
         });
 
+        // Prevent link navigation if drag took place
+        carouselTrack.addEventListener('click', (e) => {
+            if (wasDragged) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }, true); // Capture phase to intercept early
+
+        // Prevent native ghost image drag on links & images
+        blogCarousel.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+        });
+
         // Touch swipe support (for mobile/tablet)
         blogCarousel.addEventListener('touchstart', (e) => {
             isDragging = true;
+            wasDragged = false;
+            startPageX = e.touches[0].pageX;
             startX = e.touches[0].pageX - carouselTrack.offsetLeft;
             scrollLeft = trackX;
         }, { passive: true });
@@ -474,11 +519,19 @@ document.addEventListener('DOMContentLoaded', () => {
                         svg.setAttribute('height', '100%');
                         svg.removeAttribute('style'); // Clear any default inline styles
                         
-                        // Setup stroke path animations with staggered delay
+                        // Setup stroke path length custom property with staggered delay
                         const paths = svg.querySelectorAll('path, line, rect, circle, polygon');
                         paths.forEach((path, idx) => {
-                            path.style.strokeDasharray = '500';
-                            path.style.strokeDashoffset = '500';
+                            let length = 500;
+                            if (typeof path.getTotalLength === 'function') {
+                                try {
+                                    const totalLength = path.getTotalLength();
+                                    length = totalLength > 0 ? Math.ceil(totalLength) : 500;
+                                } catch (e) {
+                                    length = 500;
+                                }
+                            }
+                            path.style.setProperty('--path-length', length);
                             path.style.animationDelay = `${(idx % 120) * 10}ms`;
                         });
                     }

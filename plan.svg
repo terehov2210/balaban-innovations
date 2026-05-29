@@ -1,4 +1,36 @@
 <svg width="1600" height="1600" viewBox="0 0 1600 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    path {
+        stroke: rgba(255, 255, 255, 0.95);
+        stroke-width: 1px;
+        fill: transparent;
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        opacity: 0;
+        animation: drawSvgPathInSvg 4.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    
+    @keyframes drawSvgPathInSvg {
+        0% {
+            opacity: 0;
+            fill: transparent;
+            stroke-dashoffset: 600;
+        }
+        1% {
+            opacity: 1;
+            fill: transparent;
+        }
+        70% {
+            fill: transparent;
+            opacity: 1;
+        }
+        100% {
+            stroke-dashoffset: 0;
+            fill: #ffffff;
+            opacity: 1;
+        }
+    }
+</style>
 <g clip-path="url(#clip0_19_659)">
 <path d="M292.013 1447.13C292.197 1447.2 292.397 1447.12 292.485 1446.95C292.576 1446.76 292.505 1446.53 292.319 1446.43C283.283 1441.85 274.503 1436.6 266.22 1430.83C266.048 1430.72 265.815 1430.76 265.688 1430.92C265.571 1431.11 265.613 1431.33 265.783 1431.45C274.096 1437.25 282.907 1442.52 291.972 1447.12C291.984 1447.12 291.999 1447.13 292.013 1447.13Z" fill="white"/>
 <path d="M221.771 1389.55C221.641 1389.4 221.397 1389.36 221.237 1389.51C221.072 1389.63 221.052 1389.88 221.181 1390.04C227.581 1397.91 234.599 1405.4 242.023 1412.29C242.059 1412.33 242.107 1412.36 242.155 1412.37C242.297 1412.43 242.457 1412.39 242.563 1412.28C242.704 1412.13 242.695 1411.88 242.543 1411.73C235.14 1404.87 228.153 1397.4 221.771 1389.55Z" fill="white"/>
