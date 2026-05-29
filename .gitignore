@@ -2,3 +2,6 @@
 .antigravitycli/
 Graphik_Collection.zip
 .vercel
+# Throwaway preview/screenshot artifacts
+__*.png
+__*.html
